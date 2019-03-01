@@ -1,0 +1,21 @@
+# Maintainer: Bacchus <contact@bacchus.snucse.org>
+pkgname=pam_bacchus
+pkgver=1.0
+pkgrel=1
+pkgdesc="PAM module that authenticates with id backend"
+arch=('any')
+url="https://github.com/bacchus-snu/pam_bacchus"
+license=('MIT')
+depends=('pam' 'curl')
+makedepends=('gcc' 'make')
+source=("https://github.com/bacchus-snu/${pkgname}/archive/v${pkgver}.tar.gz")
+sha256sums=('093a1589b4d74c088db8da4d9f48b728e996b3cd2e6f668a1160d0f036fed86e')
+
+build() {
+    cd "${srcdir}/${pkgname}-${pkgver}"
+    make
+}
+
+package() {
+    install -D -m 755 "${srcdir}/${pkgname}-${pkgver}/pam_bacchus.so" "${pkgdir}/usr/lib/security/pam_bacchus.so"
+}
