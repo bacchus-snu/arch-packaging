@@ -1,0 +1,19 @@
+# Maintainer: Bacchus <contact@bacchus.snucse.org>
+pkgname=bacchus-nss-sync
+pkgver=1.0
+pkgrel=1
+pkgdesc='Sync libnss-cache data with Bacchus ID'
+arch=('any')
+url='https://github.com/bacchus-snu/arch_packaging'
+license=('MIT')
+depends=('curl')
+source=('README.md' 'bacchus-nss-sync.service' 'bacchus-nss-sync.timer')
+sha256sums=('b378e91580af22534b63f71ce29bac4863ae451a070d2f0d7276fdd2a79f5a92'
+            '35fa565e5df051bc6088076c9f4219d7bfe24fbd68e906c5f61513098e000856'
+            'd59003f11f805b19166a25ecc1945b5e584b64cdae5020e6fcd93b8877cbe86a')
+
+package() {
+    install -D -m 644 "${srcdir}/README.md" "${pkgdir}/usr/share/doc/bacchus-nss-sync/README.md"
+    install -D -m 644 "${srcdir}/bacchus-nss-sync.service" "${pkgdir}/usr/lib/systemd/system/bacchus-nss-sync.service"
+    install -D -m 644 "${srcdir}/bacchus-nss-sync.timer" "${pkgdir}/usr/lib/systemd/system/bacchus-nss-sync.timer"
+}

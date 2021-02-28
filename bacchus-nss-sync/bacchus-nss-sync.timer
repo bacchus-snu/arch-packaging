@@ -1,0 +1,10 @@
+[Unit]
+Description = Sync libnss-cache data with Bacchus ID
+Documentation = https://github.com/bacchus-snu/arch-packaging
+
+[Timer]
+OnCalendar = daily
+Persistent = true
+
+[Install]
+WantedBy = nss-user-lookup.target
