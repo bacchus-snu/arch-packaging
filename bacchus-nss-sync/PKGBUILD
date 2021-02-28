@@ -1,6 +1,6 @@
 # Maintainer: Bacchus <contact@bacchus.snucse.org>
 pkgname=bacchus-nss-sync
-pkgver=1.0
+pkgver=1.1
 pkgrel=1
 pkgdesc='Sync libnss-cache data with Bacchus ID'
 arch=('any')
@@ -8,8 +8,8 @@ url='https://github.com/bacchus-snu/arch_packaging'
 license=('MIT')
 depends=('curl')
 source=('README.md' 'bacchus-nss-sync.service' 'bacchus-nss-sync.timer')
-sha256sums=('b378e91580af22534b63f71ce29bac4863ae451a070d2f0d7276fdd2a79f5a92'
-            '35fa565e5df051bc6088076c9f4219d7bfe24fbd68e906c5f61513098e000856'
+sha256sums=('e24e4cd2a0496a9cb9f093efa6c375f4a85a798182a8ba390b41a2ea6eef0d93'
+            '0d76297890a0b77b703138c855287599af72d468f91f89943e053d9e67a22afb'
             'd59003f11f805b19166a25ecc1945b5e584b64cdae5020e6fcd93b8877cbe86a')
 
 package() {

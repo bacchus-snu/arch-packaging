@@ -6,4 +6,4 @@ Wants = network-online.target
 [Service]
 Type = oneshot
 ExecStart = sh -c 'curl -sSL https://id.snucse.org/api/nss/passwd > /etc/passwd.cache'
-ExecStart = sh -c 'curl -sSL https://id.snucse.org/api/nss/groups > /etc/groups.cache'
+ExecStart = sh -c 'curl -sSL https://id.snucse.org/api/nss/groups > /etc/group.cache'
