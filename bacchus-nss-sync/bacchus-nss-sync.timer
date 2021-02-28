@@ -7,4 +7,5 @@ OnCalendar = daily
 Persistent = true
 
 [Install]
+WantedBy = multi-user.target
 WantedBy = nss-user-lookup.target
