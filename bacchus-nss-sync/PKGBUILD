@@ -9,7 +9,7 @@ license=('MIT')
 depends=('curl')
 source=('README.md' 'bacchus-nss-sync.service' 'bacchus-nss-sync.timer')
 sha256sums=('e24e4cd2a0496a9cb9f093efa6c375f4a85a798182a8ba390b41a2ea6eef0d93'
-            '0d76297890a0b77b703138c855287599af72d468f91f89943e053d9e67a22afb'
+            'eda63817b947c2566f33d16ff37581e1d2b7cd7df338bc1bb9b9e2f9e4a44748'
             'd59003f11f805b19166a25ecc1945b5e584b64cdae5020e6fcd93b8877cbe86a')
 
 package() {
