@@ -1,0 +1,23 @@
+# Maintainer: Bacchus <contact@bacchus.snucse.org>
+pkgname=pam-bacchus-rs
+pkgver=0.2.0
+pkgrel=1
+pkgdesc="Linux-PAM module for Bacchus ID"
+arch=('x86_64' 'armv7h' 'aarch64')
+url="https://github.com/bacchus-snu/pam-bacchus-rs"
+license=('MIT')
+depends=('pam' 'curl')
+makedepends=('rust')
+provides=('pam_bacchus=0.2.0')
+conflicts=('pam_bacchus')
+source=("https://github.com/bacchus-snu/${pkgname}/archive/v${pkgver}.tar.gz")
+sha256sums=('1a9d738668753d00c4101c2eb2078dd90cda4733a3639d0a66cc79255161a01a')
+
+build() {
+  cd "${pkgname}-${pkgver}"
+  cargo build --release --frozen
+}
+
+package() {
+  install -D -m 755 "${pkgname}-${pkgver}/target/release/libpam_bacchus.so" "${pkgdir}/usr/lib/security/pam_bacchus.so"
+}
