@@ -1,7 +1,7 @@
 [Unit]
 Description = Sync libnss-cache data with Bacchus ID
 Documentation = https://github.com/bacchus-snu/arch-packaging
-Wants = network-online.target
+After = network-online.target
 
 [Service]
 Type = oneshot
